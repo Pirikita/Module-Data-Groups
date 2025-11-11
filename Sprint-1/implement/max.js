@@ -1,11 +1,15 @@
 function findMax(elements) {
-    if ( elements.length === 0){
+    const onlyNumbers = elements.filter(x => typeof x === "number" && !isNaN(x));
+    if (onlyNumbers.length < elements.length) {
         return -Infinity;
-    } else if ( elements.length == 1) {
-        return elements;
-    }
+    } if ( onlyNumbers.length === 0){
+        return -Infinity;
+    } if ( onlyNumbers.length === 1) {
+        return onlyNumbers[0];
+    } 
 }
-console.log(findMax([]));
+
+console.log(findMax([233]));
 // Given an empty array
 // When passed to the max function
 // Then it should return -Infinity
