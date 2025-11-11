@@ -1,41 +1,22 @@
 function findMax(elements) {
     const onlyNumbers = elements.filter(x => typeof x === "number" && !isNaN(x));
-    if (onlyNumbers.length < elements.length) {
+    // empty array
+    if ( onlyNumbers.length === 0){
         return -Infinity;
-    } if ( onlyNumbers.length === 0){
-        return -Infinity;
+    // array with only one number
     } if ( onlyNumbers.length === 1) {
         return onlyNumbers[0];
     } 
+    return Math.max(...onlyNumbers);
 }
 
-console.log(findMax([233]));
-// Given an empty array
-// When passed to the max function
-// Then it should return -Infinity
+console.log(findMax(["banana", 3, 20, -5, "apple", 3.5]));
+console.log(findMax([10, -5, 20, -3]));        // 20 (mixed positive/negative)
+console.log(findMax([-10, -5, -3, -8]));       // -3 (all negative)
+console.log(findMax([1.5, 2.8, 1.2, 3.1]));    // 3.1 (decimals)
+console.log(findMax([233]));                    // 233 (single number)
+console.log(findMax([]));                       // -Infinity (empty array)
+console.log(findMax(["banana"]));               // -Infinity (no valid numbers)
 
-// Given an array with one number
-// When passed to the max function
-// Then it should return that number
-
-// Given an array with both positive and negative numbers
-// When passed to the max function
-// Then it should return the largest number overall
-
-// Given an array with just negative numbers
-// When passed to the max function
-// Then it should return the closest one to zero
-
-// Given an array with decimal numbers
-// When passed to the max function
-// Then it should return the largest decimal number
-
-// Given an array with non-number values
-// When passed to the max function
-// Then it should return the max and ignore non-numeric values
-
-// Given an array with only non-number values
-// When passed to the max function
-// Then it should return the least surprising value given how it behaves for all other inputs
 
 module.exports = findMax;
