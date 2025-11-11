@@ -9,8 +9,8 @@ function includes(list, target) {
   return false;
 }
 
-
-
+console.log(includes([1, 10, 15, 20], 6));
+module.exports = includes;
 
 /*function includes(list, target) {
   for (let index = 0; index < list.length; index++) {
@@ -20,6 +20,4 @@ function includes(list, target) {
     }
   }
   return false;
-}
-*/
-module.exports = includes;
+}*/
