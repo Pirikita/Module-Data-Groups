@@ -14,6 +14,13 @@ const address = [
   country = "England",
   postcode = "XYZ 123",
 ];
+// changed from {} to [] and from : to = 
+// could just change the call in console.log with the original code
 
+// with this code, to console.log, I have to call by the index 0,1,2,3,4,5
 console.log(`My house number is ${address[0]}`);
+console.log(`My street name is ${address[1]}`);
+console.log(`My city is ${address[2]}`);
+console.log(`My country is ${address[3]}`);
+console.log(`My postcode is ${address[4]}`);
 
