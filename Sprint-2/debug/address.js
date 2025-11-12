@@ -8,7 +8,7 @@
 // Fix anything that isn't working
 
 const address = [
-  houseNumber = 42,
+  houseNumber = 56,
   street = "Imaginary Road",
   city = "Manchester",
   country = "England",
@@ -16,3 +16,4 @@ const address = [
 ];
 
 console.log(`My house number is ${address[0]}`);
+
