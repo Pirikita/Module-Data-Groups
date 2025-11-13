@@ -14,6 +14,8 @@ const author = {
   alive: true,
 };
 
+// used Object.keys in order to iterate over the properties or entries of an object; 
+// “Give me all the keys from the author object, then for each one, show me the key and its value.”
 for (const value of  Object.keys(author)) {
   const info = author[value];
   console.log(value, info);
