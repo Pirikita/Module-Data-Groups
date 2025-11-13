@@ -15,4 +15,4 @@ const recipe = {
 
 console.log(`${recipe.title} serves ${recipe.serves} 
   ingredients: 
-  ${recipe}`);
+  ${recipe.ingredients.join('\n')}`); // .join('\n') to make a new line for each value on the string
