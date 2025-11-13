@@ -1,5 +1,8 @@
 // Predict and explain first...
-    // I believe is not working because is not an array
+
+    // I believe is not working because is not an array, it will give me an syntax error 
+        // real error: TypeError: author is not iterable
+
 // This program attempts to log out all the property values in the object.
 // But it isn't working. Explain why first and then fix the problem
 
@@ -11,6 +14,7 @@ const author = {
   alive: true,
 };
 
-for (const value of author) {
-  console.log(value);
+for (const value of  Object.keys(author)) {
+  const info = author[value];
+  console.log(value, info);
 }
