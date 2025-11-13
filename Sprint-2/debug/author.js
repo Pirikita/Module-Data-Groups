@@ -1,5 +1,5 @@
 // Predict and explain first...
-
+    // I believe is not working because is not an array
 // This program attempts to log out all the property values in the object.
 // But it isn't working. Explain why first and then fix the problem
 
