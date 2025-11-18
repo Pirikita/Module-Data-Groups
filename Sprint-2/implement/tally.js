@@ -20,9 +20,9 @@ result[item] = (result[item] || 0) + 1;
     return result;
 }
 
-console.log(tally("dasda"));
-console.log(tally([]));
-console.log(tally(["a", "b", "c", "b", "a", "a"]));
+//console.log(tally("dasda"));
+//console.log(tally([]));
+//console.log(tally(["a", "b", "c", "b", "a", "a"]));
 
 
 module.exports = tally;
