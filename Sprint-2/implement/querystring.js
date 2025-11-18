@@ -24,8 +24,8 @@ function parseQueryString(queryString) {
   return queryParams;
 }
 
-console.log(parseQueryString("name=oliveira&age=28"));
-console.log(parseQueryString("name=Beatriz%20Oliveira&city=Brussels"));
+//console.log(parseQueryString("name=oliveira&age=28"));
+//console.log(parseQueryString("name=Beatriz%20Oliveira&city=Brussels"));
 
 
 module.exports = parseQueryString;
