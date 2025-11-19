@@ -41,6 +41,10 @@ function findMaxFrequency(freqs) {
   }
   return maxFreq === 0 ? NaN : mode;
 }
-
+console.log(calculateMode([1, 2, 2, 3, 3, 3]));
+console.log(calculateMode("hello world"));
+console.log(calculateMode([]));
+console.log(calculateMode(["a", "b", "c"]));
+console.log(calculateMode([1, 3, 5, "a", "b", "c"]));
 
 module.exports = calculateMode;
