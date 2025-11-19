@@ -19,7 +19,7 @@ function invert(obj) {
 console.log(invert({ a: 1, b: 2 }));
 console.log(invert({x : 10, y : 20}));
 
-module.export = invert; 
+module.exports = invert; 
 
 // a) What is the current return value when invert is called with { a : 1 }
     // { key: [ 1 ] }
