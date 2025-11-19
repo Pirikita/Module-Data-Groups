@@ -32,7 +32,12 @@ function countWords(string) {
   if (string.length === 0) {
     return {};
   }
-  const words = string.split(' ');
+
+  const cleanedString = string
+    .replace(/[.,!?]/g, '')
+    .toLowerCase();
+
+  const words = cleanedString.split(' ').filter(word => word.length > 0);
 
   for(let i=0; i < words.length; i++){
     const word = words[i];
@@ -43,7 +48,16 @@ function countWords(string) {
       totalWords[word] = 1;
     }
   }
-  return totalWords; 
+  const sortedWords = Object.entries(totalWords)
+  .sort((a,b) => b[1] - a[1])
+  .reduce((sortedObj, [word, count]) => {
+    sortedObj[word] = count;
+    return sortedObj;
+  }, {});
+  return sortedWords;
 }
 
 console.log(countWords("you and me and you"));
+console.log(countWords("you and me and me and you and your friend Steve"));
+console.log(countWords(""));
+console.log(countWords("A a B b A"));
