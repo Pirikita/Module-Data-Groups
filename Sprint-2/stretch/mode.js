@@ -9,28 +9,38 @@
 // into smaller functions using the stages above
 
 function calculateMode(list) {
-  // track frequency of each value
+  if (!Array.isArray(list)) {
+    return NaN;
+  }
+  const freqs = countFrequencies(list);
+  const mode = findMaxFrequency(freqs);
+  return mode;
+}
+
+function countFrequencies(list) {
   let freqs = new Map();
 
-  for (let num of list) {
-    if (typeof num !== "number") {
+  for(let num of list) {
+    if(typeof num !== "number") {
       continue;
     }
-
     freqs.set(num, (freqs.get(num) || 0) + 1);
   }
+  return freqs;
+}
 
-  // Find the value with the highest frequency
+function findMaxFrequency(freqs) {
   let maxFreq = 0;
   let mode;
+
   for (let [num, freq] of freqs) {
     if (freq > maxFreq) {
       mode = num;
       maxFreq = freq;
     }
   }
-
   return maxFreq === 0 ? NaN : mode;
 }
+
 
 module.exports = calculateMode;
