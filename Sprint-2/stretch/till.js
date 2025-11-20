@@ -24,6 +24,8 @@ const totalAmount = totalTill(till);
 
 console.log(totalTill(5, 5));
 
+module.exports = totalTill; 
+
 // a) What is the target output when totalTill is called with the till object
     // it should return £4.40 - so it counts the total in pence and then converts to pounds
 
