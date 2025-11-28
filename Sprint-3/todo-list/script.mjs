@@ -45,7 +45,16 @@ function render() {
   });
 }
 
-
+  // Delete completed tasks button
+  document.getElementById("delete-completed-btn").addEventListener("click", () => {
+    // Keep only tasks that are NOT completed
+    for (let i = todos.length - 1; i >= 0; i--) {
+      if (todos[i].completed) {
+        Todos.deleteTask(todos, i); // call your module function
+      }
+    }
+    render();
+  });
 // Note:
 // - First child of #todo-item-template is a <li> element.
 //   We will create each ToDo list item as a clone of this node.

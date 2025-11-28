@@ -1,12 +1,9 @@
-/*
-  A ToDo List (todos) is expected to be represented as an array of objects in 
+/*  A ToDo List (todos) is expected to be represented as an array of objects in 
   the following manner:
-
   [
     { task: "Description of task 1", completed: false},
     { task: "Description of task 2", completed: true}
   ]
-
 */
 
 // Append a new task to todos[]
