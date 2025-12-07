@@ -13,7 +13,11 @@ body {
   border-radius: 25%;
   border-style: dashed;
 }
-
+#time-input {
+    color: antiquewhite;
+    font-family: monospace;
+    font-size: smaller;
+}
 #alarmSet {
   margin: 20px;
 }
