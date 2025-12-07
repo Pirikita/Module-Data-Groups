@@ -1,9 +1,17 @@
+body {
+  background-color: dimgray;
+}
+
 .centre {
   position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background-color: grey;
+  padding: 10%;
+  border-radius: 25%;
+  border-style: dashed;
 }
 
 #alarmSet {
@@ -12,4 +20,7 @@
 
 h1 {
   text-align: center;
+  color:antiquewhite;
+  font-family: monospace;
+  font-size: 3em;
 }

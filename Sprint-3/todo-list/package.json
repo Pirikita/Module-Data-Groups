@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "serve": "http-server",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest todos.test.mjs"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CodeYourFuture/CYF-Coursework-Template#readme",
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "http-server": "^14.1.1",
     "jest": "^30.0.4"
   }
