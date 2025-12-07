@@ -1,11 +1,11 @@
 let timer;
-
+let isTenSeconds = false;
 function setAlarm() {
   const input = document.getElementById("alarmSet").value;
   let timeRemaining = Number(input);
 
+  const isTenSeconds = timeRemaining === 10;
   clearInterval(timer); // clear any previous interval
-
   updateDisplay(timeRemaining); // display in mm:ss
 
   timer = setInterval(() => {
@@ -16,7 +16,11 @@ function setAlarm() {
     // when timer reaches 0
   if (timeRemaining <= 0) {
     clearInterval(timer);
+
+    if(isTenSeconds) {
+      
     document.body.style.backgroundColor = "yellow";
+    }
     playAlarm();
   }
 }, 1000);
