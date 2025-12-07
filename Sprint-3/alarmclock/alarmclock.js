@@ -23,7 +23,7 @@ function setAlarm() {
     }
     playAlarm();
   }
-}, 1000);
+}, 1000); // 1000ms = 1 second
 }
 
 function updateDisplay(time) {
