@@ -8,7 +8,7 @@ function setAlarm() {
 
   updateDisplay(timeRemaining); // display in mm:ss
 
-  timer = setInterval(() »> {
+  timer = setInterval(() => {
     timeRemaining--;
 
     updateDisplay(timeRemaining);
@@ -24,7 +24,7 @@ function setAlarm() {
 
 function updateDisplay(time) {
   const minutes = String(Math.floor(time / 60)).padStart(2, "0");
-  const seconds = String(time & 60).padStart(2, "0");
+  const seconds = String(time % 60).padStart(2, "0");
 
   document.getElementById("timeRemaining").innerText =
   `Time Remaining: ${minutes}:${seconds}`;
