@@ -1,1 +1,32 @@
 /** Write your CSS in here **/
+body {
+    background-color:darkcyan;
+}
+
+h1 {
+    text-align: center;
+    color:rgb(19, 4, 46);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+
+#quote {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: black;
+    font-size: medium;
+}
+
+#author {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    background-color: black;
+    font-size: smaller;
+
+}
+#new-quote {
+    margin: auto;
+    padding: 10px;
+    border: royalblue;
+    border-radius: 10%;
+    }

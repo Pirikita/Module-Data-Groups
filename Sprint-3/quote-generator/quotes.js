@@ -1,5 +1,13 @@
-// DO NOT EDIT BELOW HERE
 
+function displayRandomQuote () {
+  const = randomQuote = pickFromArray(quotes);
+
+  
+}
+
+
+
+// DO NOT EDIT BELOW HERE
 // pickFromArray is a function which will return one item, at
 // random, from the given array.
 //
