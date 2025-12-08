@@ -52,6 +52,9 @@ books.forEach((book) => {
   textContainer.appendChild(title);
   textContainer.appendChild(author);
 
+  listItem.appendChild(img);
+  listItem.appendChild(textContainer);
+
   readingList.appendChild(listItem);
 
 });
