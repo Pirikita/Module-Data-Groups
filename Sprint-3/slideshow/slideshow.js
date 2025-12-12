@@ -17,7 +17,7 @@ const stopBtn = document.getElementById("stop-btn");
 // keep track of which image it's showing
 let currentIndex = 0;
 //store interval ID for auto slideshow
-let intervalID = null;
+let intervalId = null;
 
 // function to update image
 function updateImage() {
@@ -27,7 +27,7 @@ function updateImage() {
 // forward button
 forwardBtn.addEventListener("click", function (){
     currentIndex++;
-    if (currentIndez >= images.lenght) {
+    if (currentIndex >= images.length) {
         currentIndex = 0; // loop back to the start
     }
     updateImage ();
@@ -37,14 +37,15 @@ forwardBtn.addEventListener("click", function (){
 backwardBtn.addEventListener("click", function () {
     currentIndex--;
     if (currentIndex < 0) {
-        currentIndex = images.lenght -1; // go to last image
+        currentIndex = images.length -1; // go to last image
     }
+    updateImage();
 })
 
 // auto forward
 autoForwardBtn.addEventListener("click", function () {
     clearInterval(intervalId);
-    intervalID = setInterval(function () {
+    intervalId = setInterval(function () {
         currentIndex = (currentIndex + 1) % images.length;
         updateImage();
     }, 2000);// change at 2 sec
@@ -52,7 +53,7 @@ autoForwardBtn.addEventListener("click", function () {
 
 // auto backward
 autoBackwardBtn.addEventListener("click", function() {
-    clearInterval(IntervalId);
+    clearInterval(intervalId);
     intervalId = setInterval(function () {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         updateImage();
