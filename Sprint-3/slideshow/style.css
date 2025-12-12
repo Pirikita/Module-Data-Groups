@@ -1,1 +1,20 @@
-/** Write your CSS in here **/
+
+    /** Write your CSS in here **/
+body{
+    background-color: darkcyan;
+}
+image{
+    max-width: 250px;
+}
+
+#carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#allbtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
