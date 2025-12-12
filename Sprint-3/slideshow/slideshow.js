@@ -50,3 +50,12 @@ autoForwardBtn.addEventListener("click", function () {
     }, 2000);// change at 2 sec
 });
 
+// auto backward
+autoBackwardBtn.addEventListener("click", function() {
+    clearInterval(IntervalId);
+    intervalId = setInterval(function () {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    }, 2000);
+});
+
