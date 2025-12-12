@@ -10,3 +10,20 @@ const images = [
 const imgElement = document.getElementById("carousel-img");
 const forwardBtn = document.getElementById("forward-btn");
 const backwardBtn = document.getElementById("backward-btn");
+
+// keep track of which image it's showing
+let currentIndex = 0;
+
+// function to update image
+function updateImage() {
+    imgElement.src = images[currentIndex];
+}
+
+// forward button
+forwardBtn.addEventListener("click", function (){
+    currentIndex++;
+    if (currentIndez >= images.lenght) {
+        currentIndex = 0; // loop back to the start
+    }
+    updateImage ();
+})
