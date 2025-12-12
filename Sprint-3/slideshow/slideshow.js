@@ -59,3 +59,7 @@ autoBackwardBtn.addEventListener("click", function() {
     }, 2000);
 });
 
+// stop the slideshow
+stopBtn.addEventListener("click", function () {
+    clearInterval(intervalId);
+});
