@@ -27,3 +27,11 @@ forwardBtn.addEventListener("click", function (){
     }
     updateImage ();
 })
+
+// backward button
+backwardBtn.addEventListener("click", function () {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.lenght -1; // go to last image
+    }
+})
