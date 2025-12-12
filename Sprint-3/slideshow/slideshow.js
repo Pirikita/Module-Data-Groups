@@ -6,3 +6,7 @@ const images = [
 
 
 // Write your code here
+// get elements from HTML
+const imgElement = document.getElementById("carousel-img");
+const forwardBtn = document.getElementById("forward-btn");
+const backwardBtn = document.getElementById("backward-btn");
