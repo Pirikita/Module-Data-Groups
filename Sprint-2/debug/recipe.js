@@ -13,6 +13,10 @@ const recipe = {
   ingredients: ["olive oil", "tomatoes", "salt", "pepper"],
 };
 
-console.log(`${recipe.title} serves ${recipe.serves} 
-  ingredients: 
-  ${recipe.ingredients.join('\n')}`); // .join('\n') to make a new line for each value on the string
+console.log(recipe.title);
+console.log(`Serves: ${recipe.serves}`);
+console.log("Ingredients:");
+
+recipe.ingredients.forEach(ingredient => {
+  console.log(ingredient);
+});
